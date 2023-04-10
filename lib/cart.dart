@@ -29,9 +29,26 @@ class Cart extends StatelessWidget {
     500,
   ];
 
+   final List<String> details = <String>[
+     'R13 /185/75/15 27.7"x 8.5"',
+     'Red',
+     'R15 /215/75/15 27.7"x 8.5"',
+     'gray',
+     'R18/225/90/16 29.7"x 8.1"',
+   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Cart ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.orange,
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -63,6 +80,13 @@ class Cart extends StatelessWidget {
                               Text(
                                 style: const TextStyle(color: Colors.orange),
                                 price[index].toString(),
+                              ),
+                              const SizedBox(
+                                height: 6,
+                              ),
+                              Text(
+                                style: const TextStyle(color: Colors.orange),
+                                details[index].toString(),
                               ),
                               const SizedBox(
                                 height: 6,

@@ -34,9 +34,26 @@ class _TiresState extends State<Tires> {
     5000,
   ];
 
+  final List<String> details = <String>[
+    'R13 /185/75/15 27.7"x 8.5"',
+    'R14/195/85/16 29.7"x 8.1"',
+    'R15 /215/75/15 27.7"x 8.5"',
+    'R17/225/85/16 29.7"x 8.1"',
+    'R18/225/90/16 29.7"x 8.1"',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Tires ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.orange,
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -68,6 +85,13 @@ class _TiresState extends State<Tires> {
                               Text(
                                 style: const TextStyle(color: Colors.orange),
                                 price[index].toString(),
+                              ),
+                              const SizedBox(
+                                height: 6,
+                              ),
+                              Text(
+                                style: const TextStyle(color: Colors.orange),
+                                details[index].toString(),
                               ),
                               const SizedBox(
                                 height: 6,
@@ -161,7 +185,7 @@ class _TiresState extends State<Tires> {
                                 builder: (BuildContext context) => Cart()));
                       },
                       child: const Text(
-                        'Done',
+                        'Add To Cart',
                         style: TextStyle(
                             color: Colors.orange, fontWeight: FontWeight.bold),
                       ),

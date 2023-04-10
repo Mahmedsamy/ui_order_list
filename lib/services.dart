@@ -21,20 +21,38 @@ class Services extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) =>  Tires()));
-                },
-                child: const Image(
-                  image: AssetImage('images/tiro.png'),
-                  fit: BoxFit.fill,
+            child: Stack(
+              children: [
+                Container(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>  const Tires()));
+                    },
+                    child: const Image(
+                      image: AssetImage('images/tiro.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ),
-              ),
+                 Column(
+                   children: [
+                     Container(
+                       child: const Text(
+                          'Tirres',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 60.0,
+                        ),
+                ),
+                     ),
+                   ],
+                 ),
+              ],
             ),
+
           ),
           Expanded(
             child: Container(

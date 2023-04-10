@@ -38,6 +38,15 @@ class _CarBrushesState extends State<CarBrushes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Car Brushes',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.orange,
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -162,7 +171,7 @@ class _CarBrushesState extends State<CarBrushes> {
                                 builder: (BuildContext context) => Cart()));
                       },
                       child: const Text(
-                        'Done',
+                        'Add To Cart',
                         style: TextStyle(
                             color: Colors.orange, fontWeight: FontWeight.bold),
                       ),
