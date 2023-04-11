@@ -10,7 +10,6 @@ class CarBrushes extends StatefulWidget {
 }
 
 class _CarBrushesState extends State<CarBrushes> {
-
   final List<String> names = <String>[
     'Oma4',
     'Geld',
@@ -33,6 +32,14 @@ class _CarBrushesState extends State<CarBrushes> {
     3400,
     4500,
     5600,
+  ];
+
+  final List<String> details = <String>[
+    'فرش تفصيل جلد الماني رينو',
+    'عربيه mg hs',
+    'فرش تفصيل جلد الماني كيا كارينز',
+    'فرش تفصيل جلد الماني هوندا ',
+    'فرش تفصيل جلد الماني اوبيل ',
   ];
 
   @override
@@ -82,6 +89,10 @@ class _CarBrushesState extends State<CarBrushes> {
                               const SizedBox(
                                 height: 6,
                               ),
+                              Text(
+                                style: const TextStyle(color: Colors.orange),
+                                details[index].toString(),
+                              ),
                               Container(
                                 width: 140.0,
                                 color: Colors.grey.shade200,
@@ -107,7 +118,7 @@ class _CarBrushesState extends State<CarBrushes> {
                                     ),
                                     Container(
                                       padding:
-                                      const EdgeInsets.only(bottom: 30.0),
+                                          const EdgeInsets.only(bottom: 30.0),
                                       child: const Icon(
                                         Icons.minimize,
                                         color: Colors.black,
@@ -173,7 +184,8 @@ class _CarBrushesState extends State<CarBrushes> {
                       child: const Text(
                         'Add To Cart',
                         style: TextStyle(
-                            color: Colors.orange, fontWeight: FontWeight.bold),
+                            color: Colors.orange,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

@@ -67,6 +67,8 @@ flutter:
      - images/FAR44.jpg
      - images/FAR45.jpg
      - images/yourorder.jpg
+     - images/Back_to_main_page.jpg
+     - images/order-complete1.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -31,9 +31,9 @@ class Cart extends StatelessWidget {
 
    final List<String> details = <String>[
      'R13 /185/75/15 27.7"x 8.5"',
-     'Red',
+     'فرش تفصيل جلد الماني رينو',
      'R15 /215/75/15 27.7"x 8.5"',
-     'gray',
+     'فرش تفصيل جلد الماني هوند',
      'R18/225/90/16 29.7"x 8.1"',
    ];
 

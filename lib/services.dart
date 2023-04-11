@@ -42,9 +42,11 @@ class Services extends StatelessWidget {
                      Container(
                        child: const Text(
                           'Tirres',
+                        // textAlign: TextAlign.start,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 60.0,
+                          color: Colors.orange,
                         ),
                 ),
                      ),

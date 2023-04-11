@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_order_list/services.dart';
 
 class Order_Confirmation extends StatefulWidget {
   const Order_Confirmation({Key? key}) : super(key: key);
@@ -34,9 +35,9 @@ class _Order_ConfirmationState extends State<Order_Confirmation> {
 
   final List<String> details = <String>[
     'R13 /185/75/15 27.7"x 8.5"',
-    'Red',
+    'فرش تفصيل جلد الماني رينو',
     'R15 /215/75/15 27.7"x 8.5"',
-    'gray',
+    'فرش تفصيل جلد الماني هوند',
     'R18/225/90/16 29.7"x 8.1"',
   ];
 
@@ -63,7 +64,10 @@ class _Order_ConfirmationState extends State<Order_Confirmation> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   alignment: Alignment.topCenter,
-                  child: const Text('Yours order is complete'),
+                  child: const Image(
+                    image: AssetImage('images/order-complete1.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               )
             ],
@@ -195,10 +199,19 @@ class _Order_ConfirmationState extends State<Order_Confirmation> {
                 ),
               ),
               Expanded(
-                child: Container(
-
-                  height: 40.0,
-                  child: Text('Back to SHOPING'),
+                child:  Container(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>  const Services()));
+                    },
+                    child: const Image(
+                      image: AssetImage('images/Back_to_main_page.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ),
               ),
             ],
